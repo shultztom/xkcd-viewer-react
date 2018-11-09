@@ -1,18 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  Button,
-  Form,
-  FormGroup,
-  Input
-} from "reactstrap";
+
+import Content from "./components/Content";
+import SearchContainer from "./components/SearchContainer";
+import ButtonContainer from "./components/ButtonContainer";
 
 class App extends Component {
   constructor(props) {
@@ -29,21 +21,18 @@ class App extends Component {
       loaded: false,
       error: false,
       isOpen: false,
-      comicNum: ""
+      comicNum: "",
+      errMessage: ""
     };
-
-    this.changeHandler = this.changeHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
-    this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
+  toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  };
 
-  submitHandler(e) {
+  submitHandler = e => {
     let comicNum = this.state.comicNum;
     let max = this.state.maxNum;
     if (comicNum >= 1 && comicNum <= max) {
@@ -53,7 +42,8 @@ class App extends Component {
           day: null,
           month: null,
           year: null,
-          title: "404 - Comic Not Found",
+          errMessage: "404 - Comic Not Found",
+          title: null,
           img: null,
           alt: null,
           loaded: false,
@@ -68,7 +58,8 @@ class App extends Component {
         day: null,
         month: null,
         year: null,
-        title: comicNum + " is not a valid comic",
+        title: null,
+        errMessage: comicNum + " is not a valid comic",
         img: null,
         alt: null,
         loaded: false,
@@ -79,11 +70,11 @@ class App extends Component {
 
     this.setState({ comicNum: "" });
     e.preventDefault();
-  }
+  };
 
-  changeHandler(e) {
+  changeHandler = e => {
     this.setState({ comicNum: e.target.value });
-  }
+  };
 
   fetchComic = comicNum => {
     this.setState({
@@ -108,7 +99,7 @@ class App extends Component {
         headers: { "Access-Control-Allow-Origin": "*" }
       })
       .then(response => {
-        console.log(response.status);
+        //console.log(response.status);
         if (response.status === 200 && response.statusText === "OK") {
           this.setState({
             day: response.data.day,
@@ -158,215 +149,18 @@ class App extends Component {
     this.fetchComic();
   }
 
-  Content(props) {
-    if (props.loaded && !props.error) {
-      const month = props.month;
-      const day = props.day;
-      const year = props.year;
-      const img = props.img;
-      const alt = props.alt;
-      const title = props.title;
-      const num = props.num;
-
-      return (
-        <div className="content">
-          <p>
-            Comic Date: {month} / {day} /{year}
-          </p>
-          <div className="imageContainer">
-            <img className="img-fluid" src={img} alt={alt} key={num} />
-          </div>
-          <div className="titleAndAltContainer">
-            <h2>Title:</h2>
-            <h4>{title}</h4>
-            <br />
-            <h5>Alt Text:</h5>
-            <p>{alt}</p>
-            <h5>Comic Number:</h5>
-            <p>{num}</p>
-          </div>
-        </div>
-      );
-    } else if (!props.loaded && !props.error) {
-      return (
-        <div className="content">
-          <h1>Loading...</h1>
-        </div>
-      );
-    } else if (props.error) {
-      return (
-        <div className="content">
-          <h1>Error</h1>
-          <h4>{props.title}</h4>
-        </div>
-      );
-    }
-  }
-
-  FirstEverComicButton(loaded, num) {
-    if (loaded && num !== 1) {
-      return (
-        <button
-          className="btn btn-info btn-responsive"
-          onClick={() => this.fetchComic(1)}
-        >
-          |&lt;
-        </button>
-      );
-    } else if (loaded && num === 1) {
-      return <button className="btn btn-info btn-responsive">|&lt;</button>;
-    } else {
-      return <div className="randomButtonPlaceHolder" />;
-    }
-  }
-
-  PreviousComicButton(loaded, maxNum, num) {
-    let nextComic;
-
-    if (loaded && 1 < num) {
-      nextComic = num - 1;
-      if (nextComic === 404) {
-        nextComic--;
-      }
-      return (
-        <button
-          className="btn btn-info btn-responsive"
-          onClick={() => this.fetchComic(nextComic)}
-        >
-          &lt; Prev
-        </button>
-      );
-    } else if (loaded && num === 1) {
-      return <button className="btn btn-info btn-responsive">&lt; Prev</button>;
-    } else {
-      nextComic = 1;
-    }
-  }
-
-  RandomComicButton(loaded, maxNum) {
-    //v1
-    //let randomComic = 4;
-    function getRandomInt(min, max) {
-      let result = Math.floor(Math.random() * (max - min + 1)) + min;
-      // No 404 comic, need catch here
-      while (result === 404) {
-        result = Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-      return result;
-    }
-
-    let min = 1;
-    let max = maxNum;
-
-    let randomComic = getRandomInt(min, max);
-    if (loaded) {
-      return (
-        <button
-          className="btn btn-info btn-responsive"
-          onClick={() => this.fetchComic(randomComic)}
-        >
-          Random
-        </button>
-      );
-    } else {
-      return <div className="randomButtonPlaceHolder" />;
-    }
-  }
-
-  NextComicButton(loaded, maxNum, num) {
-    let max = maxNum;
-    let nextComic;
-
-    if (loaded && num < max) {
-      nextComic = num + 1;
-      if (nextComic === 404) {
-        nextComic++;
-      }
-      return (
-        <button
-          className="btn btn-info btn-responsive"
-          onClick={() => this.fetchComic(nextComic)}
-        >
-          Next &gt;
-        </button>
-      );
-    } else if (loaded && maxNum >= num) {
-      return <button className="btn btn-info btn-responsive">Next &gt;</button>;
-    } else {
-      nextComic = maxNum;
-    }
-  }
-
-  MostRecentComicButton(loaded, maxNum, num) {
-    let nextComic = maxNum;
-
-    if (loaded && num !== maxNum) {
-      return (
-        <button
-          className="btn btn-info btn-responsive"
-          onClick={() => this.fetchComic(nextComic)}
-        >
-          &gt;|
-        </button>
-      );
-    } else if (loaded && num === maxNum) {
-      return <button className="btn btn-info btn-responsive">&gt;|</button>;
-    } else {
-      return <div className="randomButtonPlaceHolder" />;
-    }
-  }
-
-  SearchContainer(error) {
-    if (error) {
-      return (
-        <div className="searchContainer">
-          <Navbar color="light" light expand="md">
-            <NavbarBrand onClick={() => window.location.reload()}>
-              Home
-            </NavbarBrand>
-          </Navbar>
-        </div>
-      );
-    } else {
-      return (
-        <div className="searchContainer">
-          <Navbar color="light" light expand="md">
-            <NavbarBrand onClick={() => window.location.reload()}>
-              Home
-            </NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <Form className="form-inline" onSubmit={this.submitHandler}>
-                    <FormGroup>
-                      <Input
-                        type="number"
-                        name="comicNum"
-                        id="comicNum"
-                        placeholder="Enter a comic number"
-                        value={this.state.comicNum}
-                        onChange={this.changeHandler}
-                      />
-                      <Button type="button" onClick={this.submitHandler}>
-                        Submit
-                      </Button>
-                    </FormGroup>
-                  </Form>
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
-        </div>
-      );
-    }
-  }
-
   render() {
     return (
       <div className="App">
-        {this.SearchContainer(this.state.error)}
-        <this.Content
+        <SearchContainer
+          error={this.state.error}
+          toggle={this.toggle}
+          isOpen={this.state.isOpen}
+          submitHandler={this.submitHandler}
+          comicNum={this.state.comicNum}
+          changeHandler={this.changeHandler}
+        />
+        <Content
           day={this.state.day}
           month={this.state.month}
           year={this.state.year}
@@ -376,26 +170,15 @@ class App extends Component {
           num={this.state.num}
           loaded={this.state.loaded}
           error={this.state.error}
+          errMessage={this.state.errMessage}
         />
-        <div className="buttonContainer">
-          {this.FirstEverComicButton(this.state.loaded, this.state.num)}
-          {this.PreviousComicButton(
-            this.state.loaded,
-            this.state.maxNum,
-            this.state.num
-          )}
-          {this.RandomComicButton(this.state.loaded, this.state.maxNum)}
-          {this.NextComicButton(
-            this.state.loaded,
-            this.state.maxNum,
-            this.state.num
-          )}
-          {this.MostRecentComicButton(
-            this.state.loaded,
-            this.state.maxNum,
-            this.state.num
-          )}
-        </div>
+        <ButtonContainer
+          error={this.state.error}
+          loaded={this.state.loaded}
+          num={this.state.num}
+          maxNum={this.state.maxNum}
+          fetchComic={this.fetchComic}
+        />
       </div>
     );
   }

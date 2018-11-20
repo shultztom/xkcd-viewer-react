@@ -93,14 +93,13 @@ class App extends Component {
     if (typeof comicNum !== "undefined") {
       selectedComic = comicNum;
     }
-    let apiStr = "https://xkcd-cors-api.herokuapp.com/api/" + selectedComic;
+    let apiStr = "https://xkcd-cors-api.shultzlab.com/api/" + selectedComic;
     axios
       .get(apiStr, {
         headers: { "Access-Control-Allow-Origin": "*" }
       })
       .then(response => {
-        //console.log(response.status);
-        if (response.status === 200 && response.statusText === "OK") {
+        if (response.status === 200) {
           this.setState({
             day: response.data.day,
             month: response.data.month,

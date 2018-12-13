@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from "axios";
 
 import Content from "./components/Content";
 import SearchContainer from "./components/SearchContainer";
 import ButtonContainer from "./components/ButtonContainer";
+
+require("es6-promise").polyfill();
+var axios = require("axios");
 
 class App extends Component {
   constructor(props) {

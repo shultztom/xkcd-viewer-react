@@ -1,26 +1,26 @@
 self.__precacheManifest = [
   {
-    "revision": "cd20ad2214af8d57315c",
+    "revision": "7f4fe8556f5e7927cad7",
     "url": "/xkcd-viewer-react/static/css/main.cf8e5e4f.chunk.css"
   },
   {
-    "revision": "cd20ad2214af8d57315c",
-    "url": "/xkcd-viewer-react/static/js/main.6556f1a1.chunk.js"
+    "revision": "7f4fe8556f5e7927cad7",
+    "url": "/xkcd-viewer-react/static/js/main.78bbc5b0.chunk.js"
   },
   {
     "revision": "5964a2f355ee406cd0e8",
     "url": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js"
   },
   {
-    "revision": "db69449bf7490a3b0cf4",
+    "revision": "3fa9f7b2ae4d126b282f",
     "url": "/xkcd-viewer-react/static/css/2.4350d05d.chunk.css"
   },
   {
-    "revision": "db69449bf7490a3b0cf4",
-    "url": "/xkcd-viewer-react/static/js/2.fd56c918.chunk.js"
+    "revision": "3fa9f7b2ae4d126b282f",
+    "url": "/xkcd-viewer-react/static/js/2.d2d820f6.chunk.js"
   },
   {
-    "revision": "28e7ff7442d72791cbe1f5c717e20eaa",
+    "revision": "1ebb6fef465a1690e2c8f95b7b79060c",
     "url": "/xkcd-viewer-react/index.html"
   }
 ];

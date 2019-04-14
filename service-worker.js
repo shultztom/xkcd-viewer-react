@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/xkcd-viewer-react/precache-manifest.9030cc2183ce948c67f0a4f678b26ce9.js"
+  "/xkcd-viewer-react/precache-manifest.72738d3f2dcef30a27ee56825f2a5943.js"
 );
 
 workbox.clientsClaim();

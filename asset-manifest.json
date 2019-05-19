@@ -1,15 +1,17 @@
 {
-  "main.css": "/xkcd-viewer-react/static/css/main.cf8e5e4f.chunk.css",
-  "main.js": "/xkcd-viewer-react/static/js/main.78bbc5b0.chunk.js",
-  "main.js.map": "/xkcd-viewer-react/static/js/main.78bbc5b0.chunk.js.map",
-  "runtime~main.js": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js",
-  "runtime~main.js.map": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js.map",
-  "static/css/2.4350d05d.chunk.css": "/xkcd-viewer-react/static/css/2.4350d05d.chunk.css",
-  "static/js/2.d2d820f6.chunk.js": "/xkcd-viewer-react/static/js/2.d2d820f6.chunk.js",
-  "static/js/2.d2d820f6.chunk.js.map": "/xkcd-viewer-react/static/js/2.d2d820f6.chunk.js.map",
-  "index.html": "/xkcd-viewer-react/index.html",
-  "precache-manifest.72738d3f2dcef30a27ee56825f2a5943.js": "/xkcd-viewer-react/precache-manifest.72738d3f2dcef30a27ee56825f2a5943.js",
-  "service-worker.js": "/xkcd-viewer-react/service-worker.js",
-  "static/css/2.4350d05d.chunk.css.map": "/xkcd-viewer-react/static/css/2.4350d05d.chunk.css.map",
-  "static/css/main.cf8e5e4f.chunk.css.map": "/xkcd-viewer-react/static/css/main.cf8e5e4f.chunk.css.map"
+  "files": {
+    "main.css": "/xkcd-viewer-react/static/css/main.948880c4.chunk.css",
+    "main.js": "/xkcd-viewer-react/static/js/main.b855bf68.chunk.js",
+    "main.js.map": "/xkcd-viewer-react/static/js/main.b855bf68.chunk.js.map",
+    "runtime~main.js": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js",
+    "runtime~main.js.map": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js.map",
+    "static/css/2.4806e67a.chunk.css": "/xkcd-viewer-react/static/css/2.4806e67a.chunk.css",
+    "static/js/2.0c5bc2cc.chunk.js": "/xkcd-viewer-react/static/js/2.0c5bc2cc.chunk.js",
+    "static/js/2.0c5bc2cc.chunk.js.map": "/xkcd-viewer-react/static/js/2.0c5bc2cc.chunk.js.map",
+    "index.html": "/xkcd-viewer-react/index.html",
+    "precache-manifest.e05b8d3c24eb4afa72b78a39d09f18ce.js": "/xkcd-viewer-react/precache-manifest.e05b8d3c24eb4afa72b78a39d09f18ce.js",
+    "service-worker.js": "/xkcd-viewer-react/service-worker.js",
+    "static/css/2.4806e67a.chunk.css.map": "/xkcd-viewer-react/static/css/2.4806e67a.chunk.css.map",
+    "static/css/main.948880c4.chunk.css.map": "/xkcd-viewer-react/static/css/main.948880c4.chunk.css.map"
+  }
 }

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/xkcd-viewer-react/static/css/main.948880c4.chunk.css",
-    "main.js": "/xkcd-viewer-react/static/js/main.b855bf68.chunk.js",
-    "main.js.map": "/xkcd-viewer-react/static/js/main.b855bf68.chunk.js.map",
+    "main.js": "/xkcd-viewer-react/static/js/main.27e93029.chunk.js",
+    "main.js.map": "/xkcd-viewer-react/static/js/main.27e93029.chunk.js.map",
     "runtime~main.js": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js",
     "runtime~main.js.map": "/xkcd-viewer-react/static/js/runtime~main.6606971a.js.map",
     "static/css/2.4806e67a.chunk.css": "/xkcd-viewer-react/static/css/2.4806e67a.chunk.css",
-    "static/js/2.0c5bc2cc.chunk.js": "/xkcd-viewer-react/static/js/2.0c5bc2cc.chunk.js",
-    "static/js/2.0c5bc2cc.chunk.js.map": "/xkcd-viewer-react/static/js/2.0c5bc2cc.chunk.js.map",
+    "static/js/2.ab8600ab.chunk.js": "/xkcd-viewer-react/static/js/2.ab8600ab.chunk.js",
+    "static/js/2.ab8600ab.chunk.js.map": "/xkcd-viewer-react/static/js/2.ab8600ab.chunk.js.map",
     "index.html": "/xkcd-viewer-react/index.html",
-    "precache-manifest.e05b8d3c24eb4afa72b78a39d09f18ce.js": "/xkcd-viewer-react/precache-manifest.e05b8d3c24eb4afa72b78a39d09f18ce.js",
+    "precache-manifest.22bad85e55e73913b6dbdc4d392e2cf6.js": "/xkcd-viewer-react/precache-manifest.22bad85e55e73913b6dbdc4d392e2cf6.js",
     "service-worker.js": "/xkcd-viewer-react/service-worker.js",
     "static/css/2.4806e67a.chunk.css.map": "/xkcd-viewer-react/static/css/2.4806e67a.chunk.css.map",
     "static/css/main.948880c4.chunk.css.map": "/xkcd-viewer-react/static/css/main.948880c4.chunk.css.map"

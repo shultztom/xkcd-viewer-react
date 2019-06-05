@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "68d753fe29f14be5d399842c8685b708",
+    "revision": "4df380e2d529827a65d9f3c3f42cd3fd",
     "url": "/xkcd-viewer-react/index.html"
   },
   {
-    "revision": "43fb76cea219779c3e4b",
+    "revision": "4b9fd0770c0b598bf39f",
     "url": "/xkcd-viewer-react/static/css/2.4806e67a.chunk.css"
   },
   {
-    "revision": "a6bdaf23691e3e5533ee",
+    "revision": "6113269b4b9a4830a5a0",
     "url": "/xkcd-viewer-react/static/css/main.948880c4.chunk.css"
   },
   {
-    "revision": "43fb76cea219779c3e4b",
-    "url": "/xkcd-viewer-react/static/js/2.0c5bc2cc.chunk.js"
+    "revision": "4b9fd0770c0b598bf39f",
+    "url": "/xkcd-viewer-react/static/js/2.ab8600ab.chunk.js"
   },
   {
-    "revision": "a6bdaf23691e3e5533ee",
-    "url": "/xkcd-viewer-react/static/js/main.b855bf68.chunk.js"
+    "revision": "6113269b4b9a4830a5a0",
+    "url": "/xkcd-viewer-react/static/js/main.27e93029.chunk.js"
   },
   {
     "revision": "5964a2f355ee406cd0e8",

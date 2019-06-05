@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xkcd-viewer-react/precache-manifest.e05b8d3c24eb4afa72b78a39d09f18ce.js"
+  "/xkcd-viewer-react/precache-manifest.22bad85e55e73913b6dbdc4d392e2cf6.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/shultztom/xkcd-viewer-react.svg)](https://greenkeeper.io/)
 
-A react app that gets data from [this](https://xkcd-cors-api.herokuapp.com/) CORS enabled xkcd API and dislays the selected comic.
+A react app that gets data from my CORS enabled xkcd API and dislays the selected comic.
 
 [Github for API](https://github.com/shultztom/xkcd-cors-api)
 
